@@ -1,0 +1,45 @@
+:root {
+    --border: 2px solid rgb(255, 99, 71);
+    --size: 70px;
+}
+
+.deckRow {
+    display: flex;
+    border-bottom: var(--border);
+}
+
+.deckRow:first-of-type {
+    border-top: var(--border);
+}
+
+.deckRow:nth-child(3n):not(:last-child) {
+    border-color: aqua;
+}
+
+
+.deckCell {
+    display: flex;
+    width: var(--size);
+    height: var(--size);
+    font-size: 1.6em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-right: var(--border);
+}
+
+.deckCell.highlighted {
+    background-color: rgb(138, 43, 226);
+}
+
+.deckCell.enter {
+    background-color: rgba(255, 99, 71, 0.4);
+}
+
+.deckCell:first-of-type {
+    border-left: var(--border);
+}
+
+.deckCell:nth-child(3n):not(:last-child) {
+    border-color: aqua;
+}
